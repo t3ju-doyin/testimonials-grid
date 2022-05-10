@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: hsl(210deg, 46%, 95%);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+body section {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+}
+body section h3 {
+  font-size: 1rem;
+  margin: 0.8rem 0 0.8rem 0;
+  line-height: 1.2;
+  width: 90%;
+  max-width: 350px;
+}
+body section p.review {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 400px;
+}
+body section header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body section header img {
+  max-width: 2rem;
+  border-radius: 2rem;
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+body section header .name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+}
+body section header .verified {
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 81%);
+}
+
+section.purple {
+  background-color: hsl(263deg, 55%, 52%);
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position: right;
+}
+section.purple div.person .name {
+  color: hsl(0deg, 0%, 81%);
+}
+section.purple div.person p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.purple p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.purple h3 {
+  color: hsl(0deg, 0%, 100%);
+}
+
+section.grey {
+  background-color: hsl(217deg, 19%, 35%);
+}
+section.grey div.person .name {
+  color: hsl(0deg, 0%, 81%);
+}
+section.grey div.person p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.grey p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.grey h3 {
+  color: white;
+}
+
+section.smaller-white {
+  background-color: hsl(0deg, 0%, 100%);
+}
+section.smaller-white div.person .name {
+  color: hsl(217deg, 19%, 35%);
+}
+section.smaller-white div.person p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.smaller-white p {
+  color: hsl(217deg, 19%, 35%);
+}
+section.smaller-white h3 {
+  color: hsl(217deg, 19%, 35%);
+}
+
+section.dark-grey {
+  background-color: hsl(219deg, 29%, 14%);
+}
+section.dark-grey div.person .name {
+  color: hsl(0deg, 0%, 81%);
+}
+section.dark-grey div.person p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.dark-grey p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.dark-grey h3 {
+  color: hsl(0deg, 0%, 81%);
+}
+
+section.bigger-white {
+  background-color: hsl(0deg, 0%, 100%);
+}
+section.bigger-white div.person .name {
+  color: hsl(217deg, 19%, 35%);
+}
+section.bigger-white div.person p {
+  color: hsl(0deg, 0%, 81%);
+}
+section.bigger-white p {
+  color: hsl(217deg, 19%, 35%);
+}
+section.bigger-white h3 {
+  color: hsl(217deg, 19%, 35%);
+}
+
+@media (min-width: 700px) {
+  body {
+    display: grid;
+    grid-template-columns: auto auto 45%;
+    grid-template-rows: auto auto 45%;
+    grid-template-areas: "daniel daniel johnathan" "daniel daniel jeanette" "patricks kira kira";
+    grid-gap: 1rem;
+  }
+  body section {
+    margin-bottom: 0;
+  }
+  body section.purple {
+    grid-area: daniel;
+  }
+  body section.purple h3 {
+    font-size: 1.3rem;
+  }
+  body section.purple .review {
+    font-size: 1.05rem;
+  }
+  body section.grey {
+    grid-area: johnathan;
+  }
+  body section.smaller-white {
+    grid-area: jeanette;
+  }
+  body section.dark-grey {
+    grid-area: patricks;
+  }
+  body section.bigger-white {
+    grid-area: kira;
+  }
+  body section.bigger-white h3 {
+    font-size: 1.3rem;
+  }
+  body section.bigger-white .review {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1050px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.5fr, 1fr;
+    grid-template-areas: "daniel daniel johnathan kira" "jeanette patricks patricks kira";
+    grid-gap: 1rem;
+  }
+  body section h3 {
+    width: 90%;
+    max-width: 450px;
+  }
+  body section p.review {
+    width: 100%;
+    max-width: 500px;
+  }
+  body section.purple {
+    grid-area: daniel;
+  }
+  body section.purple h3 {
+    font-size: 1rem;
+  }
+  body section.purple .review {
+    font-size: 1rem;
+  }
+  body section.grey {
+    grid-area: johnathan;
+  }
+  body section.grey h3 {
+    font-size: 1rem;
+  }
+  body section.grey .review {
+    font-size: 1rem;
+  }
+  body section.smaller-white {
+    grid-area: jeanette;
+  }
+  body section.smaller-white h3 {
+    font-size: 1rem;
+  }
+  body section.smaller-white .review {
+    font-size: 1rem;
+  }
+  body section.dark-grey {
+    grid-area: patricks;
+  }
+  body section.dark-grey h3 {
+    font-size: 1rem;
+  }
+  body section.dark-grey .review {
+    font-size: 1rem;
+  }
+  body section.bigger-white {
+    grid-area: kira;
+  }
+}/*# sourceMappingURL=testimonial-styles.css.map */

@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body{
+    box-sizing: border-box;
+    background-color: $Light-grayish-blue;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    section{
+        margin-bottom: 1rem;
+        border-radius: .5rem;
+        padding: 1.4rem;
+        h3{
+            font-size: 1rem;
+            margin: .8rem 0 .8rem 0 ;
+            line-height: 1.2;
+            width: 90%;
+            max-width: 350px;
+        }
+        p.review{
+            
+            font-size: .8rem;
+            line-height: 1.4;
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+    section header{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img{
+            max-width: 2rem;
+            border-radius: 2rem;
+            border: 1px solid $White;
+        }
+        .name{
+            font-size: .7rem;
+            font-weight: 600;
+            letter-spacing: .01rem;
+        }
+        .verified{
+            font-size: .6rem;
+            font-weight: 300;
+            color: $Light-gray;
+        }
+    }
+}
+section.purple{
+    background-color: $Moderate-violet;
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position: right;
+    div.person{
+        .name{
+            color: $Light-gray;
+        }
+        p{
+            color: $Light-gray;
+        }
+    }
+
+    p{
+        color: $Light-gray;
+    }
+    h3{
+        color: $White;
+    }
+
+    
+}
+section.grey{
+    background-color: $Very-dark-grayish-blue;
+    div.person{
+        .name{
+            color: $Light-gray;
+        }
+        p{
+            color: $Light-gray;
+        }
+    }
+
+    p{
+        color: $Light-gray;
+    }
+    h3{
+        color: white;
+    }
+}
+section.smaller-white{
+    background-color: $White;
+    div.person{
+        .name{
+            color: $Very-dark-grayish-blue ;
+        }
+        p{
+            color: $Light-gray;
+        }
+    }
+    p{
+        color: $Very-dark-grayish-blue;
+        // font-weight: 100;
+    }
+    h3{
+        color:$Very-dark-grayish-blue;
+    }
+}
+section.dark-grey{
+    background-color: $Very-dark-blackish-blue;
+    div.person{
+        .name{
+            color: $Light-gray;
+        }
+        p{
+            color: $Light-gray;
+        }
+    }
+    p{
+        color: $Light-gray;
+    }
+    h3{
+        color: $Light-gray;
+    }
+}
+section.bigger-white{
+    background-color: $White;
+    div.person{
+        .name{
+            color: $Very-dark-grayish-blue;
+        }
+        p{
+            color: $Light-gray;
+        }
+    }
+    p{
+        color: $Very-dark-grayish-blue;
+    }
+    h3{
+        color: $Very-dark-grayish-blue;
+    }
+}
+
+@media (min-width:700px) {
+    body{
+        display: grid;
+        grid-template-columns: auto auto 45%;
+        grid-template-rows:auto auto 45% ;
+        grid-template-areas: 
+        'daniel daniel johnathan'
+        'daniel daniel jeanette'
+        'patricks kira kira' ;
+        grid-gap: 1rem;
+        section{
+            margin-bottom: 0;
+        }
+        section.purple{
+            grid-area: daniel;
+
+            h3{
+                font-size: 1.3rem;
+            }
+            .review{
+                font-size: 1.05rem;
+            }
+        }
+        section.grey{
+            grid-area: johnathan;
+        }
+        section.smaller-white{
+            grid-area: jeanette;
+        }
+        
+        section.dark-grey{
+            grid-area: patricks;
+        }
+        section.bigger-white{
+            grid-area: kira;
+            h3{
+                font-size: 1.3rem;
+            }
+            .review{
+                font-size: 1rem;
+            }
+        }
+
+    }
+}
+@media (min-width:1050px) {
+    body{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows:1.5fr, 1fr ;
+        grid-template-areas: 
+        'daniel daniel johnathan kira'
+        'jeanette patricks patricks kira';
+        grid-gap: 1rem;
+        section{
+            h3{
+                width: 90%;
+                max-width: 450px;
+            }
+            p.review{
+                width: 100%;
+                max-width: 500px;
+            }
+        
+        }
+        section.purple{
+            grid-area: daniel;
+            h3{
+                font-size: 1rem;
+            }
+            .review{
+                font-size: 1rem;
+            }
+        }
+        section.grey{
+            grid-area: johnathan;
+            h3{
+                font-size: 1rem;
+            }
+            .review{
+                font-size: 1rem;
+            }
+
+        }
+        section.smaller-white{
+            grid-area: jeanette;
+            h3{
+                font-size: 1rem;
+            }
+            .review{
+                font-size: 1rem;
+            }
+        }
+        
+        section.dark-grey{
+            grid-area: patricks;
+            h3{
+                font-size: 1rem;
+            }
+            .review{
+                font-size: 1rem;
+            }
+        }
+        section.bigger-white{
+            grid-area: kira;
+        }
+
+    }
+}
